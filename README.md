@@ -1,23 +1,32 @@
 
+
 # 🎮 Tic Tac Toe
 
-A simple **Tic Tac Toe game** built with \[ Flutter,Dart].
-Play the classic **X and O** game with two players on the same device.
+A simple **Tic Tac Toe** game built with **Flutter** and **Dart**.
+Enjoy the classic **X and O** challenge with two players on the same device.
+
+---
 
 ## ✨ Features
 
-* 🎲 Two-player mode (Player X vs Player O)
-* 🖼️ Clean and simple UI
-* 🏆 Detects winner or draw
-* 🔄 Option to reset and start a new game
+* 🎲 **Two-player mode** (Player X vs Player O)
+* 🖼️ **Clean and intuitive UI**
+* 🏆 **Automatic winner and draw detection**
+* 🔄 **Restart option** to start a new game anytime
+
+---
 
 ## 🛠️ Tech Stack
 
-* \[Language/Framework you used]
-* \[Any libraries or tools, if applicable]
+* **Flutter** (UI toolkit)
+* **Dart** (programming language)
+* [flutter\_svg](https://pub.dev/packages/flutter_svg) (for rendering X and O icons)
 
+---
 
 ## 📌 Future Improvements
 
-* Add AI for single-player mode
-* Add animations and sound effects
+* 🤖 Add AI for single-player mode
+* 🎶 Add animations and sound effects
+* 🌐 Support online multiplayer
+
