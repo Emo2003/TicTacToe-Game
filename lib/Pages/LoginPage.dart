@@ -6,6 +6,8 @@ import 'package:tic_tac_toe/Widgets/TextFields.dart';
 import 'package:tic_tac_toe/models/UserInput.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -19,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     double height =MediaQuery.of(context).size.height;
     return Container(
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -41,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                     fit: BoxFit.cover,
                   height: 0.47*height,
                   ),
-                   LoginText(),
+                  const LoginText(),
 
                 ],),
                 Padding(
@@ -49,14 +51,14 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       TextFields(name: "Player1 Name" , controller: player1Controller,),
-                      SizedBox(height: 16,),
+                     const SizedBox(height: 16,),
                       TextFields(name: "Player2 Name" , controller: player2Controller,),
-                      SizedBox(height: 16,),
-                     Text("Pick who goes first?" ,
+                      const SizedBox(height: 16,),
+                   const  Text("Pick who goes first?" ,
                        style: TextStyle(fontSize: 24 ,
                            fontWeight: FontWeight.w500 ,
                            color: Colors.white),),
-                      SizedBox(height: 16,),
+                     const SizedBox(height: 16,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -71,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                              color: selectedPlayer=="x"?Colors.white:Colors.transparent ,
                             borderRadius: BorderRadius.circular(16)
                            ),
-                           padding: EdgeInsets.all(25),
+                           padding:const EdgeInsets.all(25),
                            child: SvgPicture.asset("assets/images/x.svg"),
                          ),
                        ),
@@ -82,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                            });
                          },
                          child: Container(
-                           padding: EdgeInsets.all(25),
+                           padding:const EdgeInsets.all(25),
                            decoration: BoxDecoration(
                                color: selectedPlayer=="o"
                               ?Colors.white:
@@ -93,11 +95,11 @@ class _LoginPageState extends State<LoginPage> {
                          ),
                        )
                       ],),
-                      SizedBox(height: 16,),
+                      const SizedBox(height: 16,),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffF4B52E),
-                             padding: EdgeInsets.all(7)
+                          backgroundColor:const  Color(0xffF4B52E),
+                             padding: const EdgeInsets.all(7)
                         ),
                           onPressed: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BoardPage() ,
@@ -107,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                             player2: player2Controller.text,
                             selectedPlayer: selectedPlayer))));
                           },
-                          child: Row(
+                          child:const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Spacer(),

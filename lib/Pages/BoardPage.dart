@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/Widgets/BoardBtn.dart';
@@ -42,7 +41,7 @@ class _BoardPageState extends State<BoardPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -63,15 +62,15 @@ class _BoardPageState extends State<BoardPage> {
                  , player2: player2,
                  scorePlayer1: scorePlayer1
                  , scorePlayer2: scorePlayer2),
-                SizedBox(height: 13,),
-                Text(message , style: TextStyle(fontSize: 36
+               const SizedBox(height: 13,),
+                Text(message , style: const TextStyle(fontSize: 36
                     , fontWeight: FontWeight.w700
                     , color: Colors.white),),
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
 
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.all(16),
+                    padding:const  EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(44)
@@ -83,10 +82,10 @@ class _BoardPageState extends State<BoardPage> {
                             children: [
                               BoardBtn(index:0 ,title: inputs[0],
                                 onTap:DrawInputs ,),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                             const VerticalDivider(color: Colors.black, thickness: 2,),
                               BoardBtn(index: 1,title: inputs[1], onTap:DrawInputs,
                                ),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                            const  VerticalDivider(color: Colors.black, thickness: 2,),
 
                               BoardBtn(index: 2,title:inputs[2], onTap:DrawInputs,
                                  ),
@@ -94,17 +93,17 @@ class _BoardPageState extends State<BoardPage> {
                             ],
                           ),
                         ),
-                        Divider(color: Colors.black, thickness: 2,height: 0,),
+                       const Divider(color: Colors.black, thickness: 2,height: 0,),
                         Expanded(
                           child: Row(
                             children: [
                               BoardBtn(index: 3,title:inputs[3], onTap:DrawInputs
                                  ),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                             const VerticalDivider(color: Colors.black, thickness: 2,),
 
                               BoardBtn(index: 4,title:inputs[4], onTap:DrawInputs
                               ),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                             const VerticalDivider(color: Colors.black, thickness: 2,),
 
                               BoardBtn(index: 5, title: inputs[5], onTap:DrawInputs,
                                  ),
@@ -112,18 +111,18 @@ class _BoardPageState extends State<BoardPage> {
                             ],
                           ),
                         ),
-                        Divider(color: Colors.black, thickness: 2,height: 0,),
+                       const Divider(color: Colors.black, thickness: 2,height: 0,),
 
                         Expanded(
                           child: Row(
                             children: [
                               BoardBtn(index: 6,title: inputs[6], onTap:DrawInputs,
                                  ),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                             const VerticalDivider(color: Colors.black, thickness: 2,),
 
                               BoardBtn(index: 7,title: inputs[7], onTap:DrawInputs,
                                 ),
-                              VerticalDivider(color: Colors.black, thickness: 2,),
+                             const VerticalDivider(color: Colors.black, thickness: 2,),
 
                               BoardBtn(index: 8,title: inputs[8], onTap:DrawInputs,
                                  ),
@@ -135,12 +134,12 @@ class _BoardPageState extends State<BoardPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 16,),
-                BottomBtns(onTap: Reset, backgroundColor:Color(0xffA949F2) , text:"Restart Game" ),
-                SizedBox(height: 16,),
+               const SizedBox(height: 16,),
+                BottomBtns(onTap: Reset, backgroundColor:const Color(0xffA949F2) , text:"Restart Game" ),
+               const SizedBox(height: 16,),
                 BottomBtns(onTap:(){
                   Navigator.of(context).pop(context);
-                } , backgroundColor:  Color(0xffA1AFD1FF), text: "    Close Game    ", end: true,)
+                } , backgroundColor: const Color(0xffa1afd1ff), text: "    Close Game    ", end: true,)
               ],
             ),
           ),
@@ -170,7 +169,12 @@ int counter=0;
    scorePlayer2++;
    return;
     }
+    else if(counter==8){
+      message="Draw !";
+      return;
+    }
     counter++;
+
   });
     }
  }

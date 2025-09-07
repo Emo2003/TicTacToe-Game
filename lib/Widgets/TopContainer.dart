@@ -11,7 +11,7 @@ class TopContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: EdgeInsets.all(13),
+      padding: const EdgeInsets.all(13),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16)
@@ -22,21 +22,21 @@ class TopContainer extends StatelessWidget {
           Column(
             children: [
               Text(player1 ,
-                  style: TextStyle(fontSize: 20 ,
+                  style:const TextStyle(fontSize: 20 ,
                       fontWeight: FontWeight.w600)
               ),
               Text(scorePlayer1.toString() ,
-                  style: TextStyle(fontSize: 20 ,
+                  style: const TextStyle(fontSize: 20 ,
                       fontWeight: FontWeight.w600))
             ],
           ),
           Column(
             children: [
               Text(player2,
-                style: TextStyle(fontSize: 20 ,
+                style: const TextStyle(fontSize: 20 ,
                     fontWeight: FontWeight.w600),),
               Text(scorePlayer2.toString() ,
-                  style: TextStyle(fontSize: 20 ,
+                  style: const TextStyle(fontSize: 20 ,
                       fontWeight: FontWeight.w600))
             ],
           )

@@ -25,7 +25,7 @@ class LoginText extends StatelessWidget {
               ..color=Color(0xff210045)
         ),
         ),
-        Text("TicTacToe", style:
+       const Text("TicTacToe", style:
         TextStyle(fontSize: 40 ,
           fontWeight: FontWeight.w900 ,
           color: Color(0xffF4B52E) ,
